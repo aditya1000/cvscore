@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WatchDM Score Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="C:/Aditya/cvscore_app/static/style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Estimate WatchDM Score</h1>
+  'Age', 'SBP', 'DBP', 'BMI',
+  'CurrentSmoking', 'HTN', 'Diabetes', 'HTNmeds', 'SCreat', 'HDL', 'LDL',
+  'TotChol', 'Trigs', 'FPG', 'NTproBNP', 'Troponin', 'CRP', 'QRS', 'QTc',
+  'LVHcv'
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="/predict"method="POST">
+      <input type="text" name="age" placeholder="age" required="required"  /><br>
+      <input type="text" name="SBP" placeholder="SBP" required="required" /><br>
+      <input type="text" name="DBP" placeholder="DBP" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="CurrentSmoking" placeholder="CurrentSmoking" required="required" /><br>
+        <input type="text" name="HTN" placeholder="HTN" required="required" /><br>
+        <input type="text" name="Diabetes" placeholder="Diabetes" required="required" /><br>
+        <input type="text" name="HTNmeds" placeholder="HTNmeds" required="required" /><br>
+        <input type="text" name="SCreat" placeholder="SCreat" required="required" /><br>
+        <input type="text" name="HDL" placeholder="HDL" required="required" /><br>
+        <input type="text" name="LDL" placeholder="LDL" required="required" /><br>
+        <input type="text" name="TotChol" placeholder="TotChol" required="required" /><br>
+        <input type="text" name="Trigs" placeholder="Trigs" required="required" /><br>
+        <input type="text" name="FPG" placeholder="FPG" required="required" /><br>
+        <input type="text" name="NTproBNP" placeholder="NTproBNP" required="required" /><br>
+        <input type="text" name="Troponin" placeholder="Troponin" required="required" /><br>
+        <input type="text" name="CRP" placeholder="CRP" required="required" /><br>
+        <input type="text" name="QRS" placeholder="QRS" required="required" /><br>
+        <input type="text" name="QTc" placeholder="QTc" required="required" /><br>
+        <input type="text" name="LVHcv" placeholder="LVHcv" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <font color="white" size="5">{{pred}}</font>
+   
+ </div>
+ 
+
+</body>
+</html>
