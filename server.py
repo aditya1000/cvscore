@@ -28,7 +28,7 @@ app = Flask(__name__)
 
 #rsf = pickle.load(open('C:/Aditya/matt/watch_dm_rsf_model.pkl','rb'))
 
-rsf = joblib.load("C:/Aditya/cvscore_app/RF_compressed.joblib")
+rsf = joblib.load("RF_compressed.joblib")
 
 
 cols = ['Age', 'SBP', 'DBP', 'BMI',
