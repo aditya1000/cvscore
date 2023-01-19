@@ -33,7 +33,7 @@ rsf = joblib.load("RF_compressed.joblib")
 def predict():
     jdata = request.json
     jdata = json.dumps(jdata)
-    data_unseen = pd.read_json(jdata, orient = 'records' )
+    data_unseen = pd.read_json(jdata)
     prediction = rsf.predict(data_unseen)
     output = prediction.round(decimals= 2)
     return jsonify({"prediction":list(output)})
